@@ -72,6 +72,7 @@ https://docs.unity3d.com/Manual/webgl-building.html
 We know that asking to install Unity is a lot, but until a working build is created and hosted,
 it may be hard to share our work without doing so.
 
+
 ### Environment
 1. Install Unity Version 2020.3.0f1
 1. Install Unity WebGL Package
@@ -83,8 +84,8 @@ We are using GitHub for Unity to work together.
 1. Install GitHub for Unity
 2. Window > GitHub > Settings
 3. Login to GitHub account and add repo URL
-4. Unity might make you commit current changes before pushing and pulling, so make sure the most recent version is installed before commiting and pushing
-5. Pull the repo to make sure everything is up to date
+4. Unity wants you to commit changes to the repo. Instead of commiting and pushing go to the changes, select all, right click and discard changes.
+6. Pull the repo to make sure everything is up to date
 
 ### Building and Running
 Currently there is no working build for Decked Out
