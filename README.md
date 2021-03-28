@@ -2,7 +2,8 @@
 SE Group Project by Herman Lin, Nicholas Mihelich, &amp; Andrew Qu
 
 ## Goal
-For this project, we are going to create an online simulator for card playing. Players will be able to freely manipulate a standard deck of playing cards to play all of the card games that a standard deck of cards can be used for.
+For this project, we are going to create an online simulator for card playing. Players will be able to freely manipulate a standard deck of playing cards to play any card game
+that requires only a deck of cards.
 
 
 ## Developer Setup
