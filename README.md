@@ -82,7 +82,7 @@ it may be hard to share our work without doing so.
 We are using GitHub for Unity to work together.
 1. Install GitHub for Unity
 2. Window > GitHub > Settings
-3. Login to GitHub accound and add repo URL
+3. Login to GitHub account and add repo URL
 4. Unity might make you commit current changes before pushing and pulling, so make sure the most recent version is installed before commiting and pushing
 5. Pull the repo to make sure everything is up to date
 
@@ -91,15 +91,15 @@ Currently there is no working build for Decked Out
 In the future when a working build is available, instructions on running and hosting the game on localhost will be added
 
 ### Commands
-'make prod'
-adds, commits, and pushes to the main repo
+`make prod`
+Currently stages and commits all modified files, and then pushes to the main repo
 (functionality also available within github for Unity)
 
-'make dev_env'
-installs requirements for running game
-currently there are no installations
+`make dev_env`
+Installs requirements for running game.
+Currently there are no installations
 
-'git clone'
-create a clone of the repository for personal use or for setting up github for unity
+`git clone`
+Create a clone of the repository for personal use or for setting up github for unity
 
 
