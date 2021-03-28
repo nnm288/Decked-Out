@@ -6,6 +6,9 @@ For this project, we are going to create an online simulator for card playing. P
 
 
 ## Developer Setup
+We know that asking to install Unity is a lot, but until a working build is created and hosted,
+it may be hard to share our work without doing so.
+
 ### Environment
 1. Install Unity Version 2020.3.0f1
 1. Install Unity WebGL Package
@@ -13,7 +16,7 @@ For this project, we are going to create an online simulator for card playing. P
 1. Add a new Unity Project in Unity Hub and select the folder of the cloned repo
 
 ### GitHub for Unity
-We are using GitHub for Unity to work in tandem
+We are using GitHub for Unity to work together.
 1. Install GitHub for Unity
 2. Window > GitHub > Settings
 3. Login to GitHub accound and add repo URL
@@ -41,7 +44,8 @@ create a clone of the repository for personal use or for setting up github for u
 ### Online play
 The game will be run using a Unity WebGL build and eventually hosted by Amazaon Web Services. 
 For now, the game will be hosted on localhost when Built and Run from Unity. Once a solid build
-is made, then instructions for local online play will become available
+is made, then instructions for local online play will become available, and eventually only a URL will be
+needed to play the game.
 https://docs.unity3d.com/Manual/webgl-building.html
 
 ### Functional Requirmenets
