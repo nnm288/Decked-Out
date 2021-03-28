@@ -6,62 +6,6 @@ For this project, we are going to create an online simulator for card playing. P
 that requires only a deck of cards.
 
 
-## Developer Setup
-We know that asking to install Unity is a lot, but until a working build is created and hosted,
-it may be hard to share our work without doing so.
-
-### Environment
-1. Install Unity Version 2020.3.0f1
-1. Install Unity WebGL Package
-1. Clone the github repo
-1. Add a new Unity Project in Unity Hub and select the folder of the cloned repo
-
-### GitHub for Unity
-We are using GitHub for Unity to work together.
-1. Install GitHub for Unity
-2. Window > GitHub > Settings
-3. Login to GitHub accound and add repo URL
-4. Unity might make you commit current changes before pushing and pulling, so make sure the most recent version is installed before commiting and pushing
-5. Pull the repo to make sure everything is up to date
-
-### Building and Running
-Currently there is no working build for Decked Out
-In the future when a working build is available, instructions on running and hosting the game on localhost will be added
-
-### Commands
-'make prod'
-adds, commits, and pushes to the main repo
-(functionality also available within github for Unity)
-
-'make dev_env'
-installs requirements for running game
-currently there are no installations
-
-'git clone'
-create a clone of the repository for personal use or for setting up github for unity
-
-## System Requirements
-
-### Online play
-The game will be run using a Unity WebGL build and eventually hosted by Amazaon Web Services. 
-For now, the game will be hosted on localhost when Built and Run from Unity. Once a solid build
-is made, then instructions for local online play will become available, and eventually only a URL will be
-needed to play the game.
-https://docs.unity3d.com/Manual/webgl-building.html
-
-### Functional Requirmenets
-1. System shall easily be able to connect a user to a game with friends (possibly using lobbies or host codes)
-1. System shall be able to create multiple games (lobbies) at once with no problems
-1. Sytem shall create a game described in User Requirements that is updated live across all connected users for seamless gameplay
-1. System shall handle input and output for multiple devices all at once
-1. System shall be able to handle multiple data structures for each game
-
-### Non-Functional Requirments
-1. Working internet connection
-1. Working PC with Internet Browser
-1. Mouse and Keyboard
-
-
 ## User Requirements
 ### UI
 
@@ -101,3 +45,61 @@ There is a neutral space called the Table.
    1. Pick up a single Card or Stack from the top
    1. Place a single Card or Stack on the bottom or top
    1. Shuffle the deck (Warning prompt when there are >52 cards in the Deck)
+
+
+## System Requirements
+
+### Online play
+The game will be run using a Unity WebGL build and eventually hosted by Amazaon Web Services. 
+For now, the game will be hosted on localhost when Built and Run from Unity. Once a solid build
+is made, then instructions for local online play will become available, and eventually only a URL will be
+needed to play the game.
+https://docs.unity3d.com/Manual/webgl-building.html
+
+### Functional Requirmenets
+1. System shall easily be able to connect a user to a game with friends (possibly using lobbies or host codes)
+1. System shall be able to create multiple games (lobbies) at once with no problems
+1. Sytem shall create a game described in User Requirements that is updated live across all connected users for seamless gameplay
+1. System shall handle input and output for multiple devices all at once
+1. System shall be able to handle multiple data structures for each game
+
+### Non-Functional Requirments
+1. Working internet connection
+1. Working PC with Internet Browser
+1. Mouse and Keyboard
+
+## Developer Setup
+We know that asking to install Unity is a lot, but until a working build is created and hosted,
+it may be hard to share our work without doing so.
+
+### Environment
+1. Install Unity Version 2020.3.0f1
+1. Install Unity WebGL Package
+1. Clone the github repo
+1. Add a new Unity Project in Unity Hub and select the folder of the cloned repo
+
+### GitHub for Unity
+We are using GitHub for Unity to work together.
+1. Install GitHub for Unity
+2. Window > GitHub > Settings
+3. Login to GitHub accound and add repo URL
+4. Unity might make you commit current changes before pushing and pulling, so make sure the most recent version is installed before commiting and pushing
+5. Pull the repo to make sure everything is up to date
+
+### Building and Running
+Currently there is no working build for Decked Out
+In the future when a working build is available, instructions on running and hosting the game on localhost will be added
+
+### Commands
+'make prod'
+adds, commits, and pushes to the main repo
+(functionality also available within github for Unity)
+
+'make dev_env'
+installs requirements for running game
+currently there are no installations
+
+'git clone'
+create a clone of the repository for personal use or for setting up github for unity
+
+
