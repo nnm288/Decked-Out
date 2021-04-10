@@ -1,5 +1,6 @@
 # Decked-Out
-SE Group Project by Herman Lin, Nicholas Mihelich, &amp; Andrew Qu
+SE Group Project by Herman Lin, Nicholas Mihelich, &amp; Andrew Qu 
+
 Created using Unity v2020.3.3f1
 
 ## Goal
