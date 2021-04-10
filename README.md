@@ -1,5 +1,6 @@
 # Decked-Out
 SE Group Project by Herman Lin, Nicholas Mihelich, &amp; Andrew Qu
+Created using Unity v2020.3.3f1
 
 ## Goal
 For this project, we are going to create an online simulator for card playing. Players will be able to freely manipulate a standard deck of playing cards to play any card game
@@ -72,9 +73,8 @@ https://docs.unity3d.com/Manual/webgl-building.html
 We know that asking to install Unity is a lot, but until a working build is created and hosted,
 it may be hard to share our work without doing so.
 
-
 ### Environment
-1. Install Unity Version 2020.3.0f1
+1. Install Unity Version 2020.3.3f1
 1. Install Unity WebGL Package
 1. Clone the github repo
 1. Add a new Unity Project in Unity Hub and select the folder of the cloned repo
@@ -83,13 +83,13 @@ it may be hard to share our work without doing so.
 We are using GitHub for Unity to work together.
 1. Install GitHub for Unity
 2. Window > GitHub > Settings
-3. Login to GitHub account and add repo URL
+3. Login to GitHub account and add this repo URL
 4. Unity wants you to commit changes to the repo. Instead of commiting and pushing go to the changes, select all, right click and discard changes.
 6. Pull the repo to make sure everything is up to date
 
 ### Building and Running
-Currently there is no working build for Decked Out
-In the future when a working build is available, instructions on running and hosting the game on localhost will be added
+Currently there is a barebones version of Decked out with a table and some card objects. This version is not worth building, however, the game can
+be simulated inside of Unity
 
 ### Commands
 `make prod`
@@ -103,4 +103,7 @@ Currently there are no installations
 `git clone`
 Create a clone of the repository for personal use or for setting up github for unity
 
-
+### Testing
+The easiest way to test the game is to use the built in Unity game player. This creates a simulated version of the current build without having to 
+actually build and run the program. 
+Full testing on Web Browser will be available soon.
