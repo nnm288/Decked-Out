@@ -48,6 +48,9 @@ There is a neutral space called the Table.
    1. Place a single Card or Stack on the bottom or top
    1. Shuffle the deck (Warning prompt when there are >52 cards in the Deck)
 
+##Actionable Requirements
+What the user can do with the current build.
+1. The user can draw blank cards
 
 ## System Requirements
 
