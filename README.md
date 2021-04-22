@@ -110,4 +110,4 @@ Create a clone of the repository for personal use or for setting up github for u
 ### Testing
 The easiest way to test the game is to use the built in Unity game player. This creates a simulated version of the current build without having to 
 actually build and run the program. 
-Full testing on Web Browser will be available soon.
+Full testing on Web Browser is possible by creating a Build and Running it using Unity. The game will run on localhost:5XXXX 
