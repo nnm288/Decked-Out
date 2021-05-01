@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117902983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -3.04, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -522,8 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc103e52860641e4e87ce0c208a640bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card_01: {fileID: 2066028504861271577, guid: a5306a2db9b579a43b9f65f52dca95ad, type: 3}
-  Card_02: {fileID: 2985027298062941469, guid: 51afa3089d23cff45a0fbc2254e3133b, type: 3}
+  Card: {fileID: 3767887285412791116, guid: 22be306db2bcfca478b1e74f91bfa641, type: 3}
   PlayerArea: {fileID: 1346022879}
   OpponentArea: {fileID: 1139138055}
 --- !u!1 &1667412970
@@ -594,8 +593,8 @@ Canvas:
   m_GameObject: {fileID: 1667412970}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1117902985}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -636,6 +635,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1667412974}
     m_Modifications:
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91b10ddabeab73247857cbb1b05ce83d, type: 3}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423148823854958996, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 423148823854958998, guid: 6602453cd70430d478ba55db9448ddc1, type: 3}
       propertyPath: m_Name
       value: Background
@@ -737,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerArea
       objectReference: {fileID: 0}
+    - target: {fileID: 5816700611641490170, guid: dc9b7545be8804f4492bfd142cbd2425, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5816700611641490171, guid: dc9b7545be8804f4492bfd142cbd2425, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -783,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5816700611641490171, guid: dc9b7545be8804f4492bfd142cbd2425, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5816700611641490171, guid: dc9b7545be8804f4492bfd142cbd2425, type: 3}
       propertyPath: m_LocalRotation.w
@@ -834,6 +869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpponentArea
       objectReference: {fileID: 0}
+    - target: {fileID: 7791780586054245297, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7791780586054245310, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -880,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7791780586054245310, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7791780586054245310, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -917,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 7791780586054245310, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791780586054245311, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a57943f421a4704b95e4485ac5d2e5d, type: 3}
