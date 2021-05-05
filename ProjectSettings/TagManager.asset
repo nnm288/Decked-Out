@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CardStack
+  - Card
   layers:
   - Default
   - TransparentFX

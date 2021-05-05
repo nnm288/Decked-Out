@@ -5,7 +5,7 @@ using UnityEngine;
 public class StackScript : MonoBehaviour
 {
     //Stack<GameObject> cardStack;
-    public Stack<string> cardStack;
+    public Stack<(string,bool)> cardStack;
     SpriteRenderer spriteRenderer;
     public GameObject cardPrefab;
     
@@ -13,16 +13,13 @@ public class StackScript : MonoBehaviour
     void Awake()
     {
         //cardStack = new Stack<GameObject>();
-        cardStack = new Stack<string>();
+        cardStack = new Stack<(string,bool)>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SetStack(Stack<string> initStack)
+    public void SetStack(Stack<(string,bool)> initStack)
     {
-        Debug.Log("in setstack");
         cardStack = initStack;
-        Debug.Log(cardStack.Peek());
-        Debug.Log(cardStack.Count);
         UpdateRender(cardStack.Peek());
     }
     public void AddCard(GameObject c)
@@ -30,18 +27,26 @@ public class StackScript : MonoBehaviour
         CardScript cardScript = c.GetComponent<CardScript>();
         string cVal = cardScript.value;
         char cSuit = cardScript.suit;
-        cardStack.Push(cVal + cSuit);
-        UpdateRender(cardStack.Peek());
+        bool cFaceUp = cardScript.faceUp;
+        cardStack.Push((cVal + cSuit, cFaceUp));
+        UpdateRender((cVal + cSuit, cFaceUp));
         Destroy(c);
         //c.transform.position = new Vector3(0, 0, 0);
         //c.transform.SetParent(this.transform, false);
         //cardStack.Push(c);
     }
 
-    public void UpdateRender(string cardType)
+    public void UpdateRender((string,bool) cardType)
     {
-        Sprite top = Resources.Load<Sprite>("Sprites/Cards/" + cardType);
-        spriteRenderer.sprite = top;
+        if (cardType.Item2)
+        {
+            spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/Cards/" + cardType.Item1);
+        }
+        else
+        {
+            spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/Cards/blue_back");
+        }
+            
     }
 
     void OnMouseDown()
@@ -49,13 +54,13 @@ public class StackScript : MonoBehaviour
         if (cardStack.Count > 0)
         {
             GameObject topCard = Instantiate(cardPrefab, transform.position, Quaternion.identity);
-            //Debug.Log(topCard.transform.position);
             topCard.transform.SetParent(GameObject.Find("TableTop").transform, false);
-            topCard.GetComponent<CardScript>().setCard(cardStack.Pop());
+            (string, bool) popped = cardStack.Pop();
+            topCard.GetComponent<CardScript>().setCard(popped.Item1, popped.Item2);
             topCard.GetComponent<DragDropScript>().StartDrag();
             if (cardStack.Count == 0)
             {
-                UpdateRender("purple_back");
+                UpdateRender(("", false));
             }
             else
             {

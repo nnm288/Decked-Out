@@ -24,7 +24,6 @@ public class DragDropScript : MonoBehaviour
     public void EndDrag()
     {
         isDragging = false;
-        Debug.Log("end drag");
         GameObject[] stacksInScene = GameObject.FindGameObjectsWithTag("CardStack");
         GameObject closestStack = null;
         float lowestDistance = 999.0f;
@@ -37,7 +36,6 @@ public class DragDropScript : MonoBehaviour
                 lowestDistance = distToStack;
             }
         }
-        Debug.Log(lowestDistance);
         if (closestStack != null & lowestDistance < 0.5f)
         {
             closestStack.GetComponent<StackScript>().AddCard(this.gameObject);
@@ -45,29 +43,6 @@ public class DragDropScript : MonoBehaviour
     }
 
     /*
-    void StartDrag(){
-    void endDrag()
-
-    void OnMouseEnter()
-    {
-        Debug.Log("entered");
-        draggable = true;
-    }
-
-    void OnMouseExit()
-    {
-        Debug.Log("exited");
-        draggable = false;
-    }
-    */
-    /*
-    void OnMouseDrag()
-    {
-        if (draggable)
-        {
-            transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-        }
-    }
 
     void OnMouseUp()
     {
