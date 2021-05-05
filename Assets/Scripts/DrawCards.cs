@@ -20,14 +20,14 @@ public class DrawCards : MonoBehaviour
     {
         for (var i = 0; i < 5; i++)
         {
-            GameObject playerCard = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject playerCard = Instantiate(Card, new Vector3(0, 0, -1), Quaternion.identity);
             playerCard.GetComponent<CardScript>().setCard("KH");
             playerCard.transform.SetParent(PlayerArea.transform, false);
-            playerCard.transform.localScale = new Vector3(7, 7, 1);
+            //playerCard.transform.localScale = new Vector3(7, 7, 1);
             GameObject opponentCard = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
             opponentCard.GetComponent<CardScript>().setCard("10D");
             opponentCard.transform.SetParent(OpponentArea.transform, false);
-            opponentCard.transform.localScale = new Vector3(7, 7, 1);
+            //opponentCard.transform.localScale = new Vector3(7, 7, 1);
         }
     }
 }
