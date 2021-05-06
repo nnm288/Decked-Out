@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5252822997067912887}
   - component: {fileID: 5252822997067912885}
   m_Layer: 0
-  m_Name: CardStack 1
+  m_Name: CardStack
   m_TagString: CardStack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 3767887285412791116, guid: 22be306db2bcfca478b1e74f91bfa641, type: 3}
+  shuffleButtonPrefab: {fileID: 9158011264645936179, guid: e23996e1948928f49a6dc2bb95c241a0, type: 3}

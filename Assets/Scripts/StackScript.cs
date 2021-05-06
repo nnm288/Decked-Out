@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class StackScript : MonoBehaviour
+public class StackScript : MonoBehaviour, IPointerClickHandler
 {
     //Stack<GameObject> cardStack;
     public Stack<(string,bool)> cardStack;
     SpriteRenderer spriteRenderer;
     public GameObject cardPrefab;
+    public GameObject shuffleButtonPrefab;
     
     // Start is called before the first frame update
     void Awake()
@@ -70,14 +72,41 @@ public class StackScript : MonoBehaviour
             }
         }
     }
-    /*
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             Debug.Log("in stack right click");
+            GameObject shuffleButton = Instantiate(shuffleButtonPrefab, transform.localPosition, Quaternion.identity);
+            shuffleButton.transform.SetParent(transform.parent.transform, false);
+            shuffleButton.GetComponent<Button>().onClick.AddListener(delegate { Shuffle(); });
         }
 
     }
-    */
+    
+    public void Shuffle()
+    {
+        Debug.Log("clicked shuffle");
+        
+        List<(string, bool)> cardList = new List<(string, bool)>();
+        foreach ((string,bool) c in cardStack)
+        {
+            cardList.Add((string, bool));
+        }
+        int n = cardList.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            (string,bool) value = cardList[k];
+            cardList[k] = cardList[n];
+            cardList[n] = value;
+        }
+        cardStack = new Stack<(string, bool)>();
+        foreach ((string,bool) c in cardList)
+        {
+            cardStack.Push(c);
+        }
+    }
 }
