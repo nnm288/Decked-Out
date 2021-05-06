@@ -116,8 +116,15 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
         {
             cardStack.Push(c);
         }
-
-        UpdateRender(cardStack.Peek());
+        if (cardStack.Count == 0)
+        {
+            UpdateRender(("", false));
+        }
+        else
+        {
+            UpdateRender(cardStack.Peek());
+        }
+        
         Destroy(GameObject.FindGameObjectWithTag("ShuffleButton"));
     }
 
