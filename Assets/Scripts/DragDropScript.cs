@@ -36,7 +36,7 @@ public class DragDropScript : MonoBehaviour
                 lowestDistance = distToStack;
             }
         }
-        if (closestStack != null & lowestDistance < 0.5f)
+        if (closestStack != null & lowestDistance < 0.8f)
         {
             closestStack.GetComponent<StackScript>().AddCard(this.gameObject);
         }

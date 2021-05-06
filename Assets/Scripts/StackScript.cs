@@ -12,13 +12,14 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
     SpriteRenderer spriteRenderer;
     public GameObject cardPrefab;
     public GameObject shuffleButtonPrefab;
-    
+
     // Start is called before the first frame update
     void Awake()
     {
         //cardStack = new Stack<GameObject>();
         cardStack = new Stack<(string,bool)>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        UpdateRender(("", false));
     }
 
     public void SetStack(Stack<(string,bool)> initStack)
@@ -45,6 +46,10 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
         if (cardType.Item2)
         {
             spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/Cards/" + cardType.Item1);
+        }
+        else if (cardType.Item1 == "")
+        {
+            spriteRenderer.sprite = null;
         }
         else
         {
@@ -78,35 +83,43 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             Debug.Log("in stack right click");
-            GameObject shuffleButton = Instantiate(shuffleButtonPrefab, transform.localPosition, Quaternion.identity);
-            shuffleButton.transform.SetParent(transform.parent.transform, false);
-            shuffleButton.GetComponent<Button>().onClick.AddListener(delegate { Shuffle(); });
+            ShuffleStack();
+            //GameObject shuffleButton = Instantiate(shuffleButtonPrefab, transform.localPosition + new Vector3(100,0,0), Quaternion.identity);
+            //shuffleButton.transform.SetParent(transform.parent.transform, false);
+            //shuffleButton.GetComponent<Button>().onClick.AddListener(delegate { ShuffleStack(); });
         }
 
     }
     
-    public void Shuffle()
+    public void ShuffleStack()
     {
         Debug.Log("clicked shuffle");
-        
+        System.Random ran = new System.Random();
         List<(string, bool)> cardList = new List<(string, bool)>();
         foreach ((string,bool) c in cardStack)
         {
-            cardList.Add((string, bool));
+            cardList.Add(c);
         }
+
         int n = cardList.Count;
         while (n > 1)
         {
             n--;
-            int k = rng.Next(n + 1);
+            int k = ran.Next(n + 1);
             (string,bool) value = cardList[k];
             cardList[k] = cardList[n];
             cardList[n] = value;
         }
+
         cardStack = new Stack<(string, bool)>();
         foreach ((string,bool) c in cardList)
         {
             cardStack.Push(c);
         }
+
+        UpdateRender(cardStack.Peek());
+        Destroy(GameObject.FindGameObjectWithTag("ShuffleButton"));
     }
+
+
 }
