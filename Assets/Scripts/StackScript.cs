@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class StackScript : MonoBehaviour
 {
@@ -69,10 +71,13 @@ public class StackScript : MonoBehaviour
         }
     }
     /*
-    void OnMouseDrag()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        GameObject drawnCard = cardStack.Pop();
-        drawnCard.transform.SetParent(this.transform.parent.transform,true);
-    }*/
-    
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            Debug.Log("in stack right click");
+        }
+
+    }
+    */
 }

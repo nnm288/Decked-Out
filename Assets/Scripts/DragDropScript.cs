@@ -12,7 +12,7 @@ public class DragDropScript : MonoBehaviour
     {
         if (isDragging)
         {
-            transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 89.8f);
+            transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, GameObject.Find("Canvas").transform.position.z);
         }
     }
 
