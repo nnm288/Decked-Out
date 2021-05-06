@@ -102,30 +102,32 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
         }
 
         int n = cardList.Count;
-        while (n > 1)
+        if (n == 52)
         {
-            n--;
-            int k = ran.Next(n + 1);
-            (string,bool) value = cardList[k];
-            cardList[k] = cardList[n];
-            cardList[n] = value;
-        }
+            while (n > 1)
+            {
+                n--;
+                int k = ran.Next(n + 1);
+                (string, bool) value = cardList[k];
+                cardList[k] = cardList[n];
+                cardList[n] = value;
+            }
 
-        cardStack = new Stack<(string, bool)>();
-        foreach ((string,bool) c in cardList)
-        {
-            cardStack.Push(c);
+            cardStack = new Stack<(string, bool)>();
+            foreach ((string, bool) c in cardList)
+            {
+                cardStack.Push(c);
+            }
+            if (cardStack.Count == 0)
+            {
+                UpdateRender(("", false));
+            }
+            else
+            {
+                UpdateRender(cardStack.Peek());
+            }
         }
-        if (cardStack.Count == 0)
-        {
-            UpdateRender(("", false));
-        }
-        else
-        {
-            UpdateRender(cardStack.Peek());
-        }
-        
-        Destroy(GameObject.FindGameObjectWithTag("ShuffleButton"));
+        //Destroy(GameObject.FindGameObjectWithTag("ShuffleButton"));
     }
 
 

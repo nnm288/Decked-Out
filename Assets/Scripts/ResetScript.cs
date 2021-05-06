@@ -11,15 +11,12 @@ public class ResetScript : MonoBehaviour
     {
         GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
         GameObject[] stacks = GameObject.FindGameObjectsWithTag("CardStack");
-        GameObject[] shuffleButtons = GameObject.FindGameObjectsWithTag("ShuffleButton");
+     
         foreach (GameObject c in cards)
         {
             Destroy(c);
         }
-        foreach (GameObject c in shuffleButtons)
-        {
-            Destroy(c);
-        }
+    
         foreach (GameObject s in stacks)
         {
             s.GetComponent<StackScript>().cardStack = new Stack<(string, bool)>();
