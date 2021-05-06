@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CardStack
   - Card
+  - ShuffleButton
   layers:
   - Default
   - TransparentFX
