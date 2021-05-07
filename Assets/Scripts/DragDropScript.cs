@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DragDropScript : MonoBehaviour
 {
@@ -24,7 +25,11 @@ public class DragDropScript : MonoBehaviour
     public void EndDrag()
     {
         isDragging = false;
-        GameObject[] stacksInScene = GameObject.FindGameObjectsWithTag("CardStack");
+        GameObject[] stacksInScene = FindObjectsOfType(typeof(GameObject))
+                    .Cast<GameObject>()
+                    .Where(g => g.tag == "StartingStack" || g.tag == "CardStack")
+                    .ToArray();
+        //GameObject[] stacksInScene = GameObject.FindGameObjectsWithTag("CardStack")+GameObject.FindGameObjectWithTag("StartingStack");
         GameObject closestStack = null;
         float lowestDistance = 999.0f;
         foreach (GameObject cardStack in stacksInScene)
