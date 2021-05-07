@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StartingStackScript : MonoBehaviour
 {
-    StackScript stackScript;
+    public StackScript stackScript;
     public List<string> cardList;
     Stack<(string,bool)> cardStack;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         stackScript = GetComponent<StackScript>();
         cardList = new List<string>();
@@ -22,6 +22,7 @@ public class StartingStackScript : MonoBehaviour
         }
         Shuffle();
         stackScript.SetStack(cardStack);
+        tag = "StartingStack";
     }
 
     void Shuffle()
@@ -32,4 +33,5 @@ public class StartingStackScript : MonoBehaviour
             cardStack.Push((s,false));
         }
     }
+
 }

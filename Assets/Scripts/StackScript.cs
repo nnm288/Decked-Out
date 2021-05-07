@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class StackScript : MonoBehaviour, IPointerClickHandler
+public class StackScript : MonoBehaviour
 {
     //Stack<GameObject> cardStack;
     public Stack<(string,bool)> cardStack;
@@ -78,57 +78,9 @@ public class StackScript : MonoBehaviour, IPointerClickHandler
         }
     }
     
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (eventData.button == PointerEventData.InputButton.Right)
-        {
-            Debug.Log("in stack right click");
-            ShuffleStack();
-            //GameObject shuffleButton = Instantiate(shuffleButtonPrefab, transform.localPosition + new Vector3(100,0,0), Quaternion.identity);
-            //shuffleButton.transform.SetParent(transform.parent.transform, false);
-            //shuffleButton.GetComponent<Button>().onClick.AddListener(delegate { ShuffleStack(); });
-        }
 
-    }
     
-    public void ShuffleStack()
-    {
-        Debug.Log("clicked shuffle");
-        System.Random ran = new System.Random();
-        List<(string, bool)> cardList = new List<(string, bool)>();
-        foreach ((string,bool) c in cardStack)
-        {
-            cardList.Add(c);
-        }
-
-        int n = cardList.Count;
-        if (n == 52)
-        {
-            while (n > 1)
-            {
-                n--;
-                int k = ran.Next(n + 1);
-                (string, bool) value = cardList[k];
-                cardList[k] = cardList[n];
-                cardList[n] = value;
-            }
-
-            cardStack = new Stack<(string, bool)>();
-            foreach ((string, bool) c in cardList)
-            {
-                cardStack.Push(c);
-            }
-            if (cardStack.Count == 0)
-            {
-                UpdateRender(("", false));
-            }
-            else
-            {
-                UpdateRender(cardStack.Peek());
-            }
-        }
-        //Destroy(GameObject.FindGameObjectWithTag("ShuffleButton"));
-    }
+  
 
 
 }

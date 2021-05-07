@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ResetScript : MonoBehaviour
 {
-    public GameObject stackPrefab;
     public GameObject startingStackPrefab;
-
     public void ResetTable()
     {
         GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
         GameObject[] stacks = GameObject.FindGameObjectsWithTag("CardStack");
-     
+        GameObject sstack = GameObject.FindGameObjectWithTag("StartingStack");
+
         foreach (GameObject c in cards)
         {
             Destroy(c);
@@ -22,10 +21,7 @@ public class ResetScript : MonoBehaviour
             s.GetComponent<StackScript>().cardStack = new Stack<(string, bool)>();
             s.GetComponent<StackScript>().UpdateRender(("",false));
         }
-        
-        //GameObject emptyStack = Instantiate(stackPrefab, new Vector3(-100, 0, 0), Quaternion.identity);
-        //emptyStack.transform.SetParent(GameObject.Find("TableTop").transform, false);
-        GameObject startingStack = Instantiate(startingStackPrefab, new Vector3(72, 0, 0), Quaternion.identity);
-        startingStack.transform.SetParent(GameObject.Find("TableTop").transform, false);
+
+        sstack.GetComponent<StartingStackScript>().Start();
     }
 }
