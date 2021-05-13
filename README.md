@@ -113,14 +113,17 @@ We are using GitHub for Unity to work together.
 ### Commands
 `make prod`
 Currently stages and commits all modified files, and then pushes to the main repo
-(functionality also available within github for Unity)
+(functionality also available within github for Unity).
 
 `make dev_env`
 Installs requirements for running game.
-Currently there are no installations
+Currently there are no installations.
+
+`make tests`
+Prints instructions for testing and/or building using the Unity Editor. By virtue of Unity Game Engine, there are currently no unit tests.
 
 `git clone`
-Create a clone of the repository for personal use or for setting up github for unity
+Create a clone of the repository for personal use or for setting up github for unity.
 
 ### Testing
 The easiest way to test the game is to use the built in Unity game player. This creates a simulated version of the current build without having to 
