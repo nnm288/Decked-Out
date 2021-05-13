@@ -10,25 +10,26 @@ that requires only a deck of cards.
 
 ## User Requirements
 ### UI
-
+#### Implemented
 1. Players can always see their Hand and the Table
-1. Players can always see where the Deck is and/or who the Dealer is
-1. Players can see the names and color of other Players around the Table and the back of their Hand
-1. Players should be able to see other players cursors (color coded) 
-1. Players should be able to invite other players somehow
+1. Players can always see where the Deck is
+1. Players can shuffle the deck
+1. Players can reset the table
+1. *Players can see the names and color of other Players around the Table and the back of their Hand*
+1. *Players should be able to see other players cursors (color coded)* 
+1. *Players should be able to invite other players somehow*
 
 ### Cards
 There is one standard deck of cards called the Deck
    1. The Deck contains Cards
-     1. The Deck is always faced down
+     1. The Deck is always in one spot on the table
      1. The Deck can be shuffled
-     1. The Deck can have Cards or Stacks placed on the bottom or the top
-     1. Either one Player has the Deck and deals to other Players or the Deck is on the Table
+     1. The Deck can have Cards placed on the top
    1. Cards can be made into Stacks
    1. Cards and Stacks can be either face up or face down
      1. This can be in a Hand or on the Table
-     1. Contents of face up Stacks can be viewed by hovering the mouse over the Stack
-     1. Individual Cards can be pulled from this Stack view window
+     1. *Contents of face up Stacks can be viewed by hovering the mouse over the Stack*
+     1. *Individual Cards can be pulled from this Stack view window*
 
 ### Hands
 1. Each Player has a hand of up to 52 Cards
@@ -45,20 +46,22 @@ There is a neutral space called the Table.
 1. On the Table any player can flip, move, pick up, or place Cards, Stacks, or the Deck
 1. When the Deck is on the table Players will be able to:
    1. Pick up a single Card or Stack from the top
-   1. Place a single Card or Stack on the bottom or top
-   1. Shuffle the deck (Warning prompt when there are >52 cards in the Deck)
+   1. Place a single Card or Stack on the *bottom or* top
+   1. Shuffle the deck *(Warning prompt when there are >52 cards in the Deck)*
 
 ##Actionable Requirements
 What the user can do with the current build.
-1. The user can draw blank cards
+1. The user can draw cards from the deck
+2. The user can flip cards
+3. The user can shuffle the deck using the shuffle button
+4. The user can reset the table with the reset button
+5. The user can make stacks by dragging and dropping
 
 ## System Requirements
 
 ### Online play
 The game will be run using a Unity WebGL build and eventually hosted by Amazaon Web Services. 
-For now, the game will be hosted on localhost when Built and Run from Unity. Once a solid build
-is made, then instructions for local online play will become available, and eventually only a URL will be
-needed to play the game.
+For now, the game will be hosted on localhost when Built and hosted by Microsoft Internet Information Services.
 https://docs.unity3d.com/Manual/webgl-building.html
 
 ### Functional Requirmenets
@@ -88,12 +91,24 @@ We are using GitHub for Unity to work together.
 1. Install GitHub for Unity
 2. Window > GitHub > Settings
 3. Login to GitHub account and add this repo URL
-4. Unity wants you to commit changes to the repo. Instead of commiting and pushing go to the changes, select all, right click and discard changes.
+4. Unity wants you to commit changes to the repo. Instead of committing and pushing, go to the changes, select all, right click and discard changes.
 6. Pull the repo to make sure everything is up to date
 
 ### Building and Running
-Currently there is a barebones version of Decked out with a table and some card objects. This version is not worth building, however, the game can
-be simulated inside of Unity
+#### Unity
+1. Go to the Unity Build menu and select Build settings
+2. Make sure you are Building a WebGL package
+3. Select Build and Run
+4. Unity will automatically open a localhost page on your preferred browser (Google Chrome recomended)
+
+#### ISS
+1. In Unity, go to Build Settings and select Build
+2. Create a new folder or use an existing one to create a new build in
+3. Install Microsoft Internet Information Services
+4. Create a new website by selecting Add Website
+5. Name the site decked out
+6. Select the path to the index.html file in the build
+7. Go to web.config and replace all the text from "Server configuration for compressed WebGL builds without decompression fallback (IIS)" at this link: https://docs.unity3d.com/Manual/webgl-server-configuration-code-samples.html
 
 ### Commands
 `make prod`
