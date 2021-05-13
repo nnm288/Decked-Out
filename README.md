@@ -21,15 +21,15 @@ that requires only a deck of cards.
 
 ### Cards
 There is one standard deck of cards called the Deck
-   1. The Deck contains Cards
-     1. The Deck is always in one spot on the table
-     1. The Deck can be shuffled
-     1. The Deck can have Cards placed on the top
-   1. Cards can be made into Stacks
-   1. Cards and Stacks can be either face up or face down
-     1. This can be in a Hand or on the Table
-     1. *Contents of face up Stacks can be viewed by hovering the mouse over the Stack*
-     1. *Individual Cards can be pulled from this Stack view window*
+1. The Deck contains Cards
+   1. The Deck is always in one spot on the table
+   1. The Deck can be shuffled
+   1. The Deck can have Cards placed on the top
+1. Cards can be made into Stacks
+1. Cards and Stacks can be either face up or face down
+   1. This can be in a Hand or on the Table
+   1. *Contents of face up Stacks can be viewed by hovering the mouse over the Stack*
+   1. *Individual Cards can be pulled from this Stack view window*
 
 ### Hands
 1. Each Player has a hand of up to 52 Cards
