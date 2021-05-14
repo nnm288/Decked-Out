@@ -9,12 +9,15 @@ that requires only a deck of cards.
 
 
 ## User Requirements
-### UI
+
 #### Implemented
 1. Players can always see their Hand and the Table
 1. Players can always see where the Deck is
 1. Players can shuffle the deck
 1. Players can reset the table
+#### Not Yet Implemented
+1. *Players can create accounts, login, and logout
+1. *Players can create rooms and invite other Players
 1. *Players can see the names and color of other Players around the Table and the back of their Hand*
 1. *Players should be able to see other players cursors (color coded)* 
 1. *Players should be able to invite other players somehow*
@@ -49,7 +52,7 @@ There is a neutral space called the Table.
    1. Place a single Card or Stack on the *bottom or* top
    1. Shuffle the deck *(Warning prompt when there are >52 cards in the Deck)*
 
-##Actionable Requirements
+### Actionable Requirements
 What the user can do with the current build.
 1. The user can draw cards from the deck
 2. The user can flip cards
