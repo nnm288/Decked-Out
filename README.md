@@ -88,6 +88,7 @@ it may be hard to share our work without doing so.
 1. Install Unity WebGL Package
 1. Clone the github repo
 1. Add a new Unity Project in Unity Hub and select the folder of the cloned repo
+1. Install the SonarLint extension for Visual Studio or Visual Studio Code
 
 ### GitHub for Unity
 We are using GitHub for Unity to work together.
